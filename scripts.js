@@ -42,11 +42,12 @@ function takePhoto() {
 }
 
 function redEffect(pixels) {
-  for(let i = 0; i < pixels.length; i += 4) {
-    pixels[i + 0] = pixels[i + 0] + 100; // r
-    pixels[i + 1] = pixels[i + 1] - 50; // g
-    pixels[i + 2] = pixels[i + 2] * 0.5; // b
+  for(let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i + 0] = pixels.data[i + 0] + 100; // r
+    pixels.data[i + 1] = pixels.data[i + 1] - 50; // g
+    pixels.data[i + 2] = pixels.data[i + 2] * 0.5; // b
   }
+  return pixels;
 }
 
 getVideo();
